@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>TF</title>
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/logo-icon.png" type="image/x-icon">
+</head>
+<body>
+<header>
+    <img class="menu-btn" onclick="sideNav()" id="menu-btn-id" src="img/Menu.png" alt="menu-icon"/>
+    <a href=index.html><img src="img/Čzueshop_logo.jpg" id="top-anchor" class="logo" alt="main_logo"></a>
+    <div class=cart-container>
+        <a href="order1.html"><img src="img/Cart_empty_white.png" class="cart-btn" alt="cart-icon"/>
+            <div class="cart-items-number"><span>0</span></div>
+        </a>
+    </div>
+    <a href=muj-ucet.html><img class="user-btn" class="sidenav-icons" alt="user-icon" src="img/user-ico.png"></a>
+    <div class="search-box">
+        <label for="search-id"></label>
+        <input class="search-txt" type="text" id="search-id" placeholder="Co hledáš?">
+        <div class="search-btn" onclick="saveValue()">
+            <a href="search.html"><img src="img/Search.png" class="search-btn" alt="search-icon"></a>
+        </div>
+    </div>
+    <nav id="sidenav" class="sidenav">
+        <ul>
+            <li><a href=index.html><img class="home-icon" src="img/home-ico.png" alt="home-icon">Domů</a></li>
+            <li><span class="kolecko" style="background: #EABC1A"></span><a href="category-fappz.html">FAPPZ</a></li>
+            <li><span class="kolecko" style="background: #D13F3F"></span><a href="category-pef.html">PEF</a></li>
+            <li id="selected"><span class="kolecko" style="background: #6EB6FF"></span><a href="category-tf.html">TF</a></li>
+            <li><span class="kolecko" style="background: #5FB849"></span><a href="category-fld.html">FLD</a></li>
+            <li><span class="kolecko" style="background: #339D83"></span><a href="category-fzp.html">FŽP</a></li>
+            <li><span class="kolecko" style="background: #F5992D"></span><a href="category-ftz.html">FTZ</a></li>
+            <li><span class="kolecko" style="background: #8C5024"></span><a href="category-ivp.html">IVP</a></li>
+            <li class="hidden-in-desktop"><a href=muj-ucet.html><img class="sidenav-icons" src="img/user-ico.png" alt="user-icon">Účet</a></li>
+            <li class="hidden-in-desktop"><a href=terms-and-conditions.html><img class="sidenav-icons" src="img/vop-ico.png" alt="vop-icon">VOP</a></li>
+            <li class="hidden-in-desktop"><a href=faq.html><img class="sidenav-icons" src="img/faq-ico.png" alt="faq-icon">FAQ</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <ul class="breadcrumb">
+        <li><a href="category.html">Kategorie</a></li>
+        <li><a href="category-tf.html">TF</a></li>
+    </ul>
+    <h2>
+        Kategorie: TF
+    </h2>
+    <section class="category-products">
+        <article class="car-box car-box-tf">
+            <a href="skripta1.html">
+                <div class="product-name-cat">
+                    <h3>Cvičení z manažerského účetnictví</h3>
+                </div>
+            <figure class="car-cat-figure">
+                <img class="car-img" src="img/skripta-img/cviceni-z-manazerskeho-ucetnictvi.jpg" alt="cviceni-z-manazerskeho-ucetnictvi"/>
+                <figcaption>125 Kč</figcaption>
+            </figure>
+            </a>
+            <a href="order.html">
+                <button type="button" class="button-add-to-cart"><img src="img/Cart_empty_white.png" class="cart-button-icon"
+                                                                      alt="cviceni-z-manazerskeho-ucetnictvi">
+                </button>
+            </a>
+        </article>
+    </section>
+</main>
+<footer>
+    <hr>
+    <section class="footer-info">
+        <div class="footer-info-box">
+            <img src="img/czu-img/czu-logo.png" alt="logo">
+        </div>
+        <div class="footer-info-box">
+            <b>ČZU</b><br><br>
+            Knihovna ČZU<br>
+            Kamýcká 129<br>
+            165 00 Praha 6 - Suchdol<br>
+            <br>
+            IČO: 604 607 09<br>
+            DIČ: CZ604 607 09<br><br><br>
+            <b>Otevírací doba eshopu: </b><br>PO-PÁ 9:00 - 12:00 a 13:00 - 15:00
+        </div>
+        <div class="footer-info-box">
+            <a href="contact.html">Kontakt - kde nás najdete ?</a><br><br>
+            <a href="about-us.html">O nás</a><br><br>
+            <a href="category.html">Kategorie</a><br><br>
+            <a href="faq.html">FAQ - Nejčastější dotazy</a><br><br>
+            <a href="terms-and-conditions.html">VOP</a><br><br>
+        </div>
+    </section>
+    <div class="copyright"><b>&copy; 2022 Vojtěch Karas & Matěj Růžička</b></div>
+    <hr>
+</footer>
+<script src="scripts/mobile-navigation.js"></script>
+<script src="scripts/addToCart.js"></script>
+<script src="scripts/search.js"></script>
+</body>
+</html>
+

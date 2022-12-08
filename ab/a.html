@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>ČZU Eshop</title>
+    <link rel="stylesheet" href="../reset.css" type="text/css">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../img/logo-icon.png" type="image/x-icon">
+
+</head>
+<body>
+<header>
+    <img class="menu-btn" onclick="sideNav()" id="menu-btn-id" src="../img/Menu.png" alt="menu-icon"/>
+    <a><img src="../img/Čzueshop_logo.jpg" id="top-anchor" class="logo" alt="main_logo"></a>
+    <div class=cart-container>
+        <a><img src="../img/Cart_empty.png" class="cart-btn" alt="cart-icon"/>
+
+        </a>
+    </div>
+
+    <a><img class="user-btn" class="sidenav-icons" alt="user-icon" src="../img/user-ico.png"></a>
+
+    <div class="search-box">
+        <label for="search-id"></label>
+        <input class="search-txt" type="text" id="search-id" placeholder="Co hledáš?">
+        <div class="search-btn" onclick="saveValue()">
+            <a><img src="../img/Search.png" class="search-btn" alt="search-icon"></a>
+        </div>
+    </div>
+    <nav id="sidenav" class="sidenav">
+        <ul>
+            <li id="selected"><a><img class="home-icon" alt="home-icon" src="../img/home-ico.png">Domů</a></li>
+            <li><span class="kolecko" style="background: #EABC1A"></span><a>FAPPZ</a></li>
+            <li><span class="kolecko" style="background: #D13F3F"></span><a>PEF</a></li>
+            <li><span class="kolecko" style="background: #6EB6FF"></span><a>TF</a></li>
+            <li><span class="kolecko" style="background: #5FB849"></span><a>FLD</a></li>
+            <li><span class="kolecko" style="background: #339D83"></span><a>FŽP</a></li>
+            <li><span class="kolecko" style="background: #F5992D"></span><a>FTZ</a></li>
+            <li><span class="kolecko" style="background: #8C5024"></span><a>IVP</a></li>
+            <li class="hidden-in-desktop"><a><img class="sidenav-icons" alt="user-icon" src="../img/user-ico.png">Účet</a></li>
+            <li class="hidden-in-desktop"><a><img class="sidenav-icons" alt="vop-icon" src="../img/vop-ico.png">VOP</a></li>
+            <li class="hidden-in-desktop"><a><img class="sidenav-icons" alt="faq-icon" src="../img/faq-ico.png">FAQ</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <figure class="figure-header">
+        <img src="../img/czu-img/sunset.jpeg" class="header-img" alt="Cars">
+        <figcaption>Eshop ČZU, prodej skript</figcaption>
+    </figure>
+    <section>
+        <article class="info-projekt">
+            <h2>
+                Informace o studentském projektu
+            </h2>
+            <p>Projekt byl vytvořen v rámci výuky předmětu <b>Internetové technologie</b>. Předmět je vyučován na České zemědělské univerzitě v Praze na provozně ekonomické fakultě. Projekt zpracovává eshop k nákupu skript.
+            </p>
+        </article>
+        <article class="category">
+            <h2>
+                Fakulty
+            </h2>
+            <ul>
+                <li><a class="fappz"><img src="../img/czu-img/logo-white.png" class="card-logo"></a></li>
+                <li><a class="pef"><img src="../img/czu-img/logo-white.png" class="card-logo"></a></li>
+                <li><a class="tf"><img src="../img/czu-img/logo-white.png" class="card-logo"></a></li>
+                <li><a class="fld"><img src="../img/czu-img/logo-white.png" class="card-logo"></a></li>
+                <li><a class="fzp"><img src="../img/czu-img/logo-white.png" class="card-logo"></a></li>
+                <li><a class="ftz"><img src="../img/czu-img/logo-white.png" class="card-logo"></a></li>
+                <li><a class="ivp"><img src="../img/czu-img/logo-white.png" class="card-logo"></a></li>
+            </ul>
+        </article>
+    </section>
+</main>
+<footer>
+    <hr>
+    <section class="footer-info">
+        <div class="footer-info-box">
+            <img src="../img/czu-img/czu-logo.png" alt="logo">
+        </div>
+        <div class="footer-info-box">
+            <b>ČZU</b><br><br>
+            Knihovna ČZU<br>
+            Kamýcká 129<br>
+            165 00 Praha 6 - Suchdol<br>
+            <br>
+            IČO: 604 607 09<br>
+            DIČ: CZ604 607 09<br><br><br>
+            <b>Otevírací doba eshopu: </b><br>PO-PÁ 9:00 - 12:00 a 13:00 - 15:00
+        </div>
+        <div class="footer-info-box">
+            <a>Kontakt - kde nás najdete ?</a><br><br>
+            <a>O nás</a><br><br>
+            <a>Kategorie</a><br><br>
+            <a>FAQ - Nejčastější dotazy</a><br><br>
+            <a>VOP</a><br><br>
+        </div>
+    </section>
+    <div class="copyright"><b>&copy; 2022 Vojtěch Karas & Matěj Růžička</b></div>
+    <hr>
+</footer>
+<!-- Display the countdown timer in an element -->
+<div id="countdown" style="position: absolute;   bottom: 20px;
+  right: 30px;color: red; font-size: 2em; z-index: 100000; position: fixed; text-align: right;"></div>
+</body>
+<script>
+    function sideNav() {
+        const nav = document.getElementById("sidenav");
+        if (nav.style.width === '50%') {
+            nav.style.width = '0';
+            document.getElementById("menu-btn-id").src = "../img/Menu.png";
+        } else {
+            nav.style.width = "50%";
+            document.getElementById("menu-btn-id").src = "../img/Menu_close.png";
+
+        }
+    }
+</script>
+<script>
+    var timeleft = 12;
+    var downloadTimer = setInterval(function(){
+        if(timeleft <= 0){
+            clearInterval(downloadTimer);
+            document.getElementById("countdown").innerHTML = "Konec";
+            window.location.replace("b.html");
+        } else {
+            document.getElementById("countdown").innerHTML = "Verze A" + "<br>" + "Zbývá " + timeleft + " s";
+        }
+        timeleft -= 1;
+    }, 1000);
+</script>
+</html>

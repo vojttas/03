@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Můj účet</title>
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/logo-icon.png" type="image/x-icon">
+</head>
+<body>
+<header>
+    <img class="menu-btn" onclick="sideNav()" id="menu-btn-id" src="img/Menu.png" alt="menu-icon"/>
+    <a href=index.html><img src="img/Čzueshop_logo.jpg" id="top-anchor" class="logo" alt="main_logo"></a>
+    <div class=cart-container>
+        <a href="order1.html"><img src="img/Cart_empty.png" class="cart-btn" alt="cart-icon"/>
+            <div class="cart-items-number"><span>0</span></div>
+        </a>
+    </div>
+    <a href=muj-ucet.html><img class="user-btn" class="sidenav-icons" alt="user-icon" src="img/user-ico.png"></a>
+    <div class="search-box">
+        <label for="search-id"></label>
+        <input class="search-txt" type="text" id="search-id" placeholder="Co hledáš?">
+        <div class="search-btn" onclick="saveValue()">
+            <a href="search.html"><img src="img/Search.png" class="search-btn" alt="search-icon"></a>
+        </div>
+    </div>
+    <nav id="sidenav" class="sidenav">
+        <ul>
+            <li><a href=index.html><img class="home-icon" src="img/home-ico.png" alt="home-icon">Domů</a></li>
+            <li><span class="kolecko" style="background: #EABC1A"></span><a href="category-fappz.html">FAPPZ</a></li>
+            <li><span class="kolecko" style="background: #D13F3F"></span><a href="category-pef.html">PEF</a></li>
+            <li><span class="kolecko" style="background: #6EB6FF"></span><a href="category-tf.html">TF</a></li>
+            <li><span class="kolecko" style="background: #5FB849"></span><a href="category-fld.html">FLD</a></li>
+            <li><span class="kolecko" style="background: #339D83"></span><a href="category-fzp.html">FŽP</a></li>
+            <li><span class="kolecko" style="background: #F5992D"></span><a href="category-ftz.html">FTZ</a></li>
+            <li><span class="kolecko" style="background: #8C5024"></span><a href="category-ivp.html">IVP</a></li>
+            <li id="selected" class="hidden-in-desktop"><a href=muj-ucet.html><img class="sidenav-icons" src="img/user-ico.png" alt="user-icon">Účet</a></li>
+            <li class="hidden-in-desktop"><a href=terms-and-conditions.html><img class="sidenav-icons" src="img/vop-ico.png" alt="vop-icon">VOP</a></li>
+            <li class="hidden-in-desktop"><a href=faq.html><img class="sidenav-icons" src="img/faq-ico.png" alt="faq-icon">FAQ</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+  <div class="whole-account-page">
+      <div class="page-header">
+          <h2>Můj účet</h2>
+          <img src="img/user-ico.png" alt="user-icon">
+      </div>
+      <div class="account-info">
+          <div class="account-info-name">
+              <span role="textbox" id="nameInput">Karel Červený</span>
+              <img onClick="changeName()" src="img/edit-ico.png" alt="edit-name-icon"/>
+          </div>
+          <div class="account-info-email">
+              <span role="textbox" id="emailInput">karel.cerveny@gmail.com</span>
+            <img onClick="changeEmail()" src="img/edit-ico.png" alt="edit-email-icon" />
+          </div>
+          <br>
+          <a class="forgot-pass" href="forgot-password.html">Zapomenuté heslo?</a>
+      </div>
+      <section>
+          <div class="order-history">
+              <h3><b>Historie objednávek</b><br></h3>
+              <table>
+                  <thead>
+                  <tr>
+                      <th class="column-names">Název</th>
+                      <th class="column-names">Cena</th>
+                      <th class="column-names">Datum</th>
+                  </thead>
+                  <tbody>
+                  <!--Sem přijdou data z DB ohldedně objednávek-->
+                  <tr>
+                      <th>Accounting Theory</th>
+                      <th>170 Kč</th>
+                      <th>15.09.2021</th>
+                  </tr>
+                  <tr>
+                      <th>Botanika</th>
+                      <th>437 Kč</th>
+                      <th>15.09.2021</th>
+                  </tr>
+                  <tr>
+                      <th>Cvičebnice z předmětu obecná ekonimie</th>
+                      <th>107 Kč</th>
+                      <th>17.09.2021</th>
+                  </tr>
+                  <tr>
+                      <th>Cvičení z ekonomiky odvětví</th>
+                      <th>71 Kč</th>
+                      <th>01.10.2022</th>
+                  </tr>
+                  <tr>
+                      <th>Cvičení z manažerského účetnictví</th>
+                      <th>125 Kč</th>
+                      <th>03.10.2022</th>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
+      </section>
+      <section class="cards-section">
+          <h3><b>Platební karty</b><br></h3>
+          <div class="saved-cards">
+              <div class="cards">
+                  <div class="card">
+                      <div class="card-info">
+                          <h4>Visa manželky</h4>
+                          <p>4598 12** **** 7852</p>
+                      </div>
+                      <img class="card-image" src="img/visa.png" alt="visa">
+                  </div>
+                  <div class="card">
+                      <div class="card-info">
+                          <h4>Mastercard</h4>
+                          <p>6584 79** **** 6481</p>
+                      </div>
+                      <img class="card-image2" src="img/mastercard.png" alt="mastercard">
+                  </div>
+                  <div class="card add-card">
+                      <img class="add-card-img" src="img/plus-sign-ico-white.png" alt="add-card-icon">
+                      <div class="card-info">
+                          <h4>Přidat kartu</h4>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+    <a href="login.html">
+        <button type="submit" class="logout-button"><b>ODHLÁSIT SE</b></button>
+    </a>
+    <div class="login-paragraph">
+        <br>
+        <p>Používáním souhlasíte s našimi <a href="terms-and-conditions.html"><b>Obchodními podmínkami a Zásady ochrany osobních údajů.</b></a></p>
+    </div>
+</main>
+<footer>
+    <hr>
+    <section class="footer-info">
+        <div class="footer-info-box">
+            <img src="img/czu-img/czu-logo.png" alt="logo">
+        </div>
+        <div class="footer-info-box">
+            <b>ČZU</b><br><br>
+            Knihovna ČZU<br>
+            Kamýcká 129<br>
+            165 00 Praha 6 - Suchdol<br>
+            <br>
+            IČO: 604 607 09<br>
+            DIČ: CZ604 607 09<br><br><br>
+            <b>Otevírací doba eshopu: </b><br>PO-PÁ 9:00 - 12:00 a 13:00 - 15:00
+        </div>
+        <div class="footer-info-box">
+            <a href="contact.html">Kontakt - kde nás najdete ?</a><br><br>
+            <a href="about-us.html">O nás</a><br><br>
+            <a href="category.html">Kategorie</a><br><br>
+            <a href="faq.html">FAQ - Nejčastější dotazy</a><br><br>
+            <a href="terms-and-conditions.html">VOP</a><br><br>
+        </div>
+    </section>
+    <div class="copyright"><b>&copy; 2022 Vojtěch Karas & Matěj Růžička</b></div>
+    <hr>
+</footer>
+<script src="scripts/mobile-navigation.js"></script>
+<script src="scripts/addToCart.js"></script>
+<script src="scripts/search.js"></script>
+<script src="scripts/changeName.js"></script>
+</body>
+</html>
