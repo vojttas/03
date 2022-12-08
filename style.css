@@ -181,6 +181,7 @@ main {
     z-index: 1;
     background-color: var(--lightestgreen);
     overflow-x: hidden;
+    scroll-behavior: auto;
     transition: 0.5s;
     border-radius: var(--border-radius);
 }
@@ -232,15 +233,14 @@ ul a {
 .category ul a {
     border-radius: var(--border-radius);
     padding: 10px;
-    height: 75px;
-    width: 75px;
+    height: 65px;
+    aspect-ratio: 1/1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .category li {
     justify-items: center;
-    height: 75px;
-    line-height: 75px;
+    height: 65px;
     margin-bottom: 40px;
     display: inline-grid;
     grid-column: span 2;
